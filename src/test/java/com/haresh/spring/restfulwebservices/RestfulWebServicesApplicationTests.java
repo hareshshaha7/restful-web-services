@@ -1,4 +1,4 @@
-package com.haresh.sprinf.restfulwebservices;
+package com.haresh.spring.restfulwebservices;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

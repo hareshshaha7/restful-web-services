@@ -1,4 +1,4 @@
-package com.haresh.sprinf.restfulwebservices;
+package com.haresh.spring.restfulwebservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
