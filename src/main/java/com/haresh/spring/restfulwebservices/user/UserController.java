@@ -30,6 +30,9 @@ public class UserController {
 
     @GetMapping("/find/{id}")
     public User findUser(@PathVariable int id) {
-        return dao.findOne(id);
+        User user = dao.findOne(id);
+        if (user == null)
+            throw new UserNotFoundException("user id: " + id);
+        return user;
     }
 }
