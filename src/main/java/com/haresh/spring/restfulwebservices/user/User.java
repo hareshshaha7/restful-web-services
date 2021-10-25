@@ -1,10 +1,16 @@
 package com.haresh.spring.restfulwebservices.user;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
     private Integer id;
+
+    @Size(min = 2, message = "Name Should have at least 2 chars.")
     private String name;
+
+    @Past(message = "Date should be from past")
     private Date birthDate;
 
     public User() {

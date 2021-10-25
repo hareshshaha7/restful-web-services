@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public ResponseEntity<User> AddNewUser(@RequestBody User user) {
+    public ResponseEntity<User> AddNewUser(@Valid @RequestBody User user) {
         User savedUser = dao.save(user);
         URI location = ServletUriComponentsBuilder.fromCurrentServletMapping().path("user/{id}").buildAndExpand(savedUser.getId()).toUri();
 
